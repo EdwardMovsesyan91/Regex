@@ -87,6 +87,7 @@ function raiseMessage(element, message) {
     element.innerHTML = message
 }
 
+
 function raiseMessage(element, message) {
     element.innerHTML = message
 }

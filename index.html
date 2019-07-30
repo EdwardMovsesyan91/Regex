@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+        span {font-size: 10px}
+        </style>
+    </head>
+
+    <body>
+
+        <div style="height:220px;width:300px;text-align:
+            center;margin:auto;border:1px solid black">
+            <form id="formValidation">
+
+                <form id="formValidation">
+                    <label>Enter your email</label>
+                    <br>
+                    <input type="text" name="userName" />
+                    <br>
+                    <span style="color:red" id="error"> </span>
+                    <span style="color:green" id="success"> </span>
+                    <br>
+                    <label>Enter your password</label>
+                    <br>
+                    <input type="password" name="password" id="password">
+                    <br>
+                    <span style="color:red" id="weck"> </span>
+                    <span style="color:green" id="strong"> </span>
+                    <br>
+                    <label>Confirm Password</label>
+                    <br>
+                    <input type="password" name="passwordConfirm" id="confirmPassword">
+                    <br>
+                    <span id='message'></span>
+                    <br>
+                    <br>
+                    <button type="submit" disabled id="submit">Submit</button>
+                </form>
+            </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script src="index.js"></script>
+        </body>
+
+    </html>

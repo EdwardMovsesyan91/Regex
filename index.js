@@ -26,7 +26,7 @@ const DOM = {
     success: form.querySelector("#success"),
     password: form['password'],
     confirmPassword: form['confirmPassword'],
-    weck: form.querySelector("#weck"),
+    weak: form.querySelector("#weak"),
     strong: form.querySelector("#strong"),
 }
 
@@ -35,10 +35,9 @@ DOM.password.addEventListener("input", function (event) {
     const {
         value
     } = event.currentTarget
-    console.log()
-    if (!value) return raiseMessage(DOM.weck, "Your password is weck")
+    if (!value) return raiseMessage(DOM.weak, "Your password is weak")
     const passwordValidationResult = validatePass(value)
-    if (!passwordValidationResult) return raiseMessage(DOM.weck, "Minimum eight characters, at least one letter and one number:")
+    if (!passwordValidationResult) return raiseMessage(DOM.weak, "Minimum eight characters, at least one letter and one number:")
     $('#password, #confirmPassword').on('keyup', function () {
         if ($('#password').val() === $('#confirmPassword').val()) {
             console.log('your password is confirmd')
@@ -71,7 +70,7 @@ function resetErrors() {
     } = DOM;
     error.innerHTML = "";
     success.innerHTML = "";
-    weck.innerHTML = "";
+    weak.innerHTML = "";
     strong.innerHTML = "";
 }
 
@@ -81,10 +80,6 @@ function validatePass(input) {
 
 function validateEmail(input) {
     return emailRegex.test(input.toLowerCase())
-}
-
-function raiseMessage(element, message) {
-    element.innerHTML = message
 }
 
 
